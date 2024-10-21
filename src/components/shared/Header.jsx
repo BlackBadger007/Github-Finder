@@ -49,7 +49,7 @@ function Header(){
             <div className="can" style={{display:'flex' , justifyContent:'space-between'}} >
                 <div className="s1" style={{display:'flex'}} >
             <FaGithub style={{color:'white' , margin:'auto 10px', fontSize:'40px' }} />
-            <h2 className="h1-head" > Github Finder</h2>
+            <h2 className="h1-head" onClick={() => navigate('/')} style={{cursor:'pointer'}} > Github Finder</h2>
 
                 </div>
                 <div className="s2" style={{display:'flex'}} >

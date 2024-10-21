@@ -27,11 +27,11 @@ const Favourites = () => {
             itemfromstorage=[];
         }else{
             itemfromstorage=JSON.parse(localStorage.getItem('User'));
+            
+            await itemfromstorage.filter((x) => x.user.email === credentials.email&& (filee = x.favourites))
+            setFile (filee)
         }
-
-        await itemfromstorage.filter((x) => x.user.email === credentials.email&& (filee = x.favourites))
         
-        setFile (filee)
         setFileLoad(false)
     }
 

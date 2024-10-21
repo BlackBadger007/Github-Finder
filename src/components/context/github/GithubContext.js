@@ -24,6 +24,8 @@ export const GithubProvider = ({children}) => {
     }
 
     const fetchUsers= async () => {
+
+        const token = process.env.REACT_APP_GITHUB_BEARER_TOKEN
  
         const params = new URLSearchParams({
             q:text,
@@ -31,7 +33,7 @@ export const GithubProvider = ({children}) => {
         
         const response= await fetch (`https://api.github.com/search/users?${params}` , {
             headers : {
-                Authorization : `token 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`
+                Authorization : `token ${token}`
             }
         })
 
@@ -49,7 +51,7 @@ export const GithubProvider = ({children}) => {
     const userProfile= async (login) => {
         setLoading()
 
-            const token = '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'
+            const token = process.env.REACT_APP_GITHUB_BEARER_TOKEN
             const response= await fetch (`https://api.github.com/users/${login}` , {
                 headers : {
                     Authorization: `token ${token}` 
@@ -77,14 +79,13 @@ export const GithubProvider = ({children}) => {
 
     const userRepos = async (repos ) => {
         
-        const token = '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'
+        const token = process.env.REACT_APP_GITHUB_BEARER_TOKEN
         const response= await fetch (repos , {
             headers : {
                 Authorization : `token ${token}`
             }
         })
         const repo = await response.json()
-        console.log(repo);
        
         dispatch({
             type: 'GET_REPOS',

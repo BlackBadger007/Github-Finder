@@ -27,9 +27,16 @@ function UsersList(){
                     <p style={{fontSize:'17px' , color:'white' }} >{file.length} Result's</ p>
                     <button className="clr-btn" onClick={handleClear} >Clear</button>
                 </div>
+
+                // : <div className="res-clr">
+                //     <h2>Result's Cleared</h2>
+                // </div>
             }
 
             <div className="container">
+                {file.length === 0 && <div className="res-clr">
+                    <h2>Result's Cleared</h2>
+                </div>}
                 {
                     file.map((item) => (
                         <div className="card" key={item.id}>
@@ -40,7 +47,7 @@ function UsersList(){
                             <Link to={`/user/${item.login}`} className="link-to-profile" >Show Profile</Link>
                         </div>
                     ))
-                }  
+                } 
             </div>
         </div>
             

@@ -52,7 +52,6 @@ function UserProfile(){
             let arr ;
             
             iteminStorage=JSON.parse(localStorage.getItem('User'));
-            console.log(iteminStorage);
             iteminStorage.filter((x) => x.user.email === credentials.email && (val = x))
             iteminStorage = await iteminStorage.filter((x) => x.user.email !==  credentials.email)
 

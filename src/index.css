@@ -409,6 +409,15 @@ a:hover{
   font-weight: 400;
   cursor: pointer;
 }
+.res-clr h2{
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  font-weight: 300;
+  margin:0px 0px;
+  margin-top: 47px;
+ 
+}
 
 
 
