@@ -10,6 +10,7 @@ body{
   margin-top: 50px;
 }
 .big-container{
+  min-height: 660px;
   max-width: 1200px;
   margin: auto;
   margin-top: 0px;
