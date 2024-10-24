@@ -117,7 +117,7 @@ const Favourites = () => {
         )
     }else if(file.length > 0 && vara === 'fav'){
         return(
-            <div className="big-container" style={{minHeight:'649px'}} >
+            <div className="big-container" style={{minHeight:'660px'}} >
                 <ToastContainer style={{fontSize : '20px' , fontWeight:'400'}}  />
                         {file.length > 0 && 
                     <div className="bar"  >
