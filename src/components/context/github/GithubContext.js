@@ -30,6 +30,7 @@ export const GithubProvider = ({children}) => {
         const params = new URLSearchParams({
             q:text,
         })
+
         
         const response= await fetch (`https://api.github.com/search/users?${params}` , {
             headers : {

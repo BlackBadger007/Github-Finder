@@ -23,13 +23,19 @@ const Favourites = () => {
     const apple = async () => {
         let itemfromstorage;
         let filee;
-        if(localStorage.getItem('User')===null){
-            itemfromstorage=[];
+        if(localStorage.getItem('User')){
+
+            if(localStorage.getItem('User')=== 'null'){
+                itemfromstorage=[];
+            }else{
+                itemfromstorage=JSON.parse(localStorage.getItem('User'));
+                
+                await itemfromstorage.filter((x) => x.user.email === credentials.email&& (filee = x.favourites))
+                setFile (filee)
+            }
         }else{
-            itemfromstorage=JSON.parse(localStorage.getItem('User'));
-            
-            await itemfromstorage.filter((x) => x.user.email === credentials.email&& (filee = x.favourites))
-            setFile (filee)
+            itemfromstorage=[];
+
         }
         
         setFileLoad(false)
